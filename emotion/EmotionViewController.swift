@@ -22,7 +22,7 @@ class EmotionViewController: UIViewController {
         Emotion.fear: "😱",
         Emotion.neutral: "😐",
         Emotion.contempt: "🙄",
-        Emotion.disgust: "",
+        Emotion.disgust: "🤮",
         Emotion.surprise: "😮",
     ]
 

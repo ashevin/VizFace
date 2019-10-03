@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8258A4412344707600BB398E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258A4402344707600BB398E /* AppDelegate.swift */; };
-		8258A4432344707600BB398E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258A4422344707600BB398E /* SceneDelegate.swift */; };
 		8258A4452344707600BB398E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258A4442344707600BB398E /* ViewController.swift */; };
 		8258A4482344707600BB398E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8258A4462344707600BB398E /* Main.storyboard */; };
 		8258A44A2344707800BB398E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8258A4492344707800BB398E /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		8258A4632344B01400BB398E /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258A4622344B01400BB398E /* Promise.swift */; };
 		8258A4652344B03400BB398E /* FaceDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258A4642344B03400BB398E /* FaceDetect.swift */; };
 		8258A4672344BEBC00BB398E /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258A4662344BEBC00BB398E /* EmotionViewController.swift */; };
+		8258A46B23460A4C00BB398E /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258A46A23460A4C00BB398E /* UIImage+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 /* Begin PBXFileReference section */
 		8258A43D2344707600BB398E /* emotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8258A4402344707600BB398E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8258A4422344707600BB398E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8258A4442344707600BB398E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8258A4472344707600BB398E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8258A4492344707800BB398E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		8258A4622344B01400BB398E /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		8258A4642344B03400BB398E /* FaceDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetect.swift; sourceTree = "<group>"; };
 		8258A4662344BEBC00BB398E /* EmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
+		8258A46A23460A4C00BB398E /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,6 @@
 			children = (
 				8258A4622344B01400BB398E /* Promise.swift */,
 				8258A4402344707600BB398E /* AppDelegate.swift */,
-				8258A4422344707600BB398E /* SceneDelegate.swift */,
 				8258A4442344707600BB398E /* ViewController.swift */,
 				8258A4462344707600BB398E /* Main.storyboard */,
 				8258A4492344707800BB398E /* Assets.xcassets */,
@@ -95,6 +94,7 @@
 				8258A44E2344707800BB398E /* Info.plist */,
 				8258A4642344B03400BB398E /* FaceDetect.swift */,
 				8258A4662344BEBC00BB398E /* EmotionViewController.swift */,
+				8258A46A23460A4C00BB398E /* UIImage+extensions.swift */,
 			);
 			path = emotion;
 			sourceTree = "<group>";
@@ -212,9 +212,9 @@
 				8258A4672344BEBC00BB398E /* EmotionViewController.swift in Sources */,
 				8258A4452344707600BB398E /* ViewController.swift in Sources */,
 				8258A4412344707600BB398E /* AppDelegate.swift in Sources */,
-				8258A4432344707600BB398E /* SceneDelegate.swift in Sources */,
 				8258A4632344B01400BB398E /* Promise.swift in Sources */,
 				8258A4652344B03400BB398E /* FaceDetect.swift in Sources */,
+				8258A46B23460A4C00BB398E /* UIImage+extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VM2T2M2T8;
 				INFOPLIST_FILE = emotion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VM2T2M2T8;
 				INFOPLIST_FILE = emotion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

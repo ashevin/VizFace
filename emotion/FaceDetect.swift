@@ -8,6 +8,9 @@
 
 import UIKit
 
+// Optimally, the app should use a proxy service which allows visibility of the
+// API key to be limited and controlled by said service.  Such a proxy would
+// also allow for switching out the back-end, or tweaking request parameters.
 private let apiKey = "bf84aac353a34ef19a5687ebce41d9eb"
 private let ep = URL(string: "https://vizface.cognitiveservices.azure.com/face/v1.0/detect?returnFaceLandmarks=true&returnFaceAttributes=emotion")!
 
@@ -99,6 +102,7 @@ func detect(_ image: UIImage) -> Promise<(UIImage, DetectionResult)> {
     req.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
     req.httpMethod = "POST"
     req.httpBody = data
+
 
     let session = URLSession(configuration: .default)
 

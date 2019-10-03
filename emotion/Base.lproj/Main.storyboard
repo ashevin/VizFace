@@ -15,28 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5Q-hO-Ntl">
-                                <rect key="frame" x="153" y="255" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5Q-hO-Ntl">
+                                <rect key="frame" x="152.5" y="255" width="109" height="30"/>
                                 <state key="normal" title="Choose a Photo"/>
                                 <connections>
                                     <action selector="choosePhotoTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EM0-bI-AOE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-3o-Tk2">
-                                <rect key="frame" x="163" y="305" width="89" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-3o-Tk2">
+                                <rect key="frame" x="162.5" y="315" width="89" height="30"/>
                                 <state key="normal" title="Take a Photo"/>
                                 <connections>
                                     <action selector="takePhotoTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOt-cw-5AR"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4St-4v-VFq">
-                                <rect key="frame" x="197" y="383" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4St-4v-VFq">
+                                <rect key="frame" x="188.5" y="383" width="37" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Xj3-Jc-cga"/>
+                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ah6-3o-Tk2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0N4-aH-XOC"/>
+                            <constraint firstItem="Ah6-3o-Tk2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="271" id="7Il-1C-1jY"/>
+                            <constraint firstItem="U5Q-hO-Ntl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="9Rj-Z7-cAr"/>
+                            <constraint firstItem="4St-4v-VFq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GBN-Ad-ug0"/>
+                            <constraint firstItem="U5Q-hO-Ntl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Tjg-qq-Osa"/>
+                            <constraint firstItem="4St-4v-VFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="339" id="xDg-7Y-eYI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -48,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
         <!--Emotion View Controller-->
         <scene sceneID="Ckz-Mj-fTO">
@@ -58,21 +66,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-Wi-kNV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-Wi-kNV">
                                 <rect key="frame" x="87" y="116" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-iT-ajL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-iT-ajL">
                                 <rect key="frame" x="20" y="405" width="374" height="314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="314" id="x0V-MX-XkI"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQ9-cu-SvF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQ9-cu-SvF">
                                 <rect key="frame" x="353" y="44" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneTap:" destination="GIP-oi-XGA" eventType="touchUpInside" id="5mI-fB-7oT"/>
@@ -80,6 +88,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="puZ-As-Ana" firstAttribute="bottom" secondItem="2aY-iT-ajL" secondAttribute="bottom" constant="94" id="DcD-Ja-FUN"/>
+                            <constraint firstItem="oQ9-cu-SvF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="puZ-As-Ana" secondAttribute="leading" symbolic="YES" id="E4p-a9-e6M"/>
+                            <constraint firstItem="2aY-iT-ajL" firstAttribute="centerX" secondItem="puZ-As-Ana" secondAttribute="centerX" id="HuZ-Ak-ZUZ"/>
+                            <constraint firstItem="XcM-Wi-kNV" firstAttribute="centerX" secondItem="puZ-As-Ana" secondAttribute="centerX" id="J02-9M-UdY"/>
+                            <constraint firstItem="XcM-Wi-kNV" firstAttribute="leading" secondItem="puZ-As-Ana" secondAttribute="leading" constant="87" id="NSR-gc-XuR"/>
+                            <constraint firstItem="puZ-As-Ana" firstAttribute="trailing" secondItem="oQ9-cu-SvF" secondAttribute="trailing" constant="24" id="Oj8-yy-lQm"/>
+                            <constraint firstItem="2aY-iT-ajL" firstAttribute="top" secondItem="XcM-Wi-kNV" secondAttribute="bottom" constant="49" id="cAO-L1-iW2"/>
+                            <constraint firstItem="2aY-iT-ajL" firstAttribute="centerX" secondItem="XcM-Wi-kNV" secondAttribute="centerX" id="fle-rP-6FU"/>
+                            <constraint firstItem="oQ9-cu-SvF" firstAttribute="top" secondItem="puZ-As-Ana" secondAttribute="top" id="j8F-Ag-nry"/>
+                            <constraint firstItem="XcM-Wi-kNV" firstAttribute="top" secondItem="puZ-As-Ana" secondAttribute="top" constant="72" id="lO4-0d-kGr"/>
+                            <constraint firstItem="2aY-iT-ajL" firstAttribute="leading" secondItem="X5I-lF-VEd" secondAttribute="leadingMargin" id="tEg-AR-bsr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="puZ-As-Ana"/>
                     </view>
                     <toolbarItems/>

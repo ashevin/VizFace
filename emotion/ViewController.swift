@@ -40,11 +40,17 @@ class ViewController: UIViewController {
     }
 
     func display(image: UIImage, result: DetectionResult) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "emotion_result") as? EmotionViewController else {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "emotion_result") as? EmotionViewController else {
             return
         }
 
-        vc.image = crop(image: image, to: result.faceRect)
+        // Choosing to crop here is a bit of a judgement call.  The rational is
+        // that the destination is given *what* to display, and the cropped
+        // image is that thing.
+        // It would also be a valid design to pass the raw image and the full
+        // detection results, and allow the destination to choose what to do
+        // with that information.
+        vc.image = image.cropped(to: result.faceRect)
         vc.emotion = result.faceAttributes.emotion
 
         present(vc, animated: true, completion: nil)
@@ -75,11 +81,22 @@ class ViewController: UIViewController {
         takePhotoBtn.isEnabled = true
     }
 
-    func crop(image: UIImage, to rect: CGRect) -> UIImage {
-        let cgImage = image.cgImage!
-        let croppedCGImage = cgImage.cropping(to: rect)
+    // Images taken by the camera are not rotated as expected
+    func rotate(image: UIImage) -> UIImage {
+        let angle: CGFloat
+        // The .up and .upMirrored orientations do not require rotation
+        switch image.imageOrientation {
+        case .down, .downMirrored:
+            angle = CGFloat.pi
+        case .left, .leftMirrored:
+            angle = CGFloat.pi * 1.5
+        case .right, .rightMirrored:
+            angle = CGFloat.pi / 2
+        default:
+            angle = 0
+        }
 
-        return UIImage(cgImage: croppedCGImage!)
+        return image.rotated(by: angle)
     }
 }
 
@@ -90,7 +107,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 
         showBusy()
 
-        detect(image)
+        detect(rotate(image: image))
             .then(on: .main) { self.display(image: $0.0, result: $0.1) }
             .error(on: .main) { self.display(error: $0) }
             .finally(on: .main) { self.showAvailable() }
